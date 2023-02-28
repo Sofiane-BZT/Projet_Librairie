@@ -22,5 +22,4 @@ $idmdubuttonhidden  = $_GET["id"];
 
                         echo "Suppression impossible";
                     }
-
 ?>

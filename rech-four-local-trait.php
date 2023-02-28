@@ -63,16 +63,17 @@ $LocaliteDuFournisseur = $_POST["localite_du_f"]
                       <td><?=$obj->Email_fournisseur?></td>
                       <td><?=$obj->Fax_fournisseur ?></td>
                       <td><?=$obj->Nb_pages ?></td>
-                
-              <?php
+
+          <?php
               }
-            } catch (PDOException $e){
+
+              } catch (PDOException $e){
 
               die("<p> Echec de la connexion. Erreur[".$e->getCode()."] : ".$e->getMessage()."</p>");
-}
-?>
-            </tbody> 
+              }
+          ?>
+              </tbody> 
             </table>
           </div>
-          </body>
-          </html>
+        </body>
+      </html>

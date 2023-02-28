@@ -16,7 +16,6 @@ include "header-connecte.php";
 ?>
 
 <form class="container w-50 border p-2 bg-light-subtle  rounded-2 mt-5" action="ajout-traitement.php" method="post">
-     
         <p class="mb-7 fs-5 my-3 fs-2">Ajouter un livre</p>
 
         <div class="row g-2 align-items-center my-1">

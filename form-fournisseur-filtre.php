@@ -17,7 +17,7 @@ include "connexion.php";
 ?>
 
 <form class="container w-50 p-2 bg-light-subtle rounded-top-2 mt-5" action="rech-four-rais-s-trait.php" method="post">
-     
+
         <p class="mb-7 fs-5 my-3 fs-2">Rechercher fournisseur</p>
 
         <div class="row g-2 align-items-center my-1">
@@ -26,7 +26,7 @@ include "connexion.php";
             </div>
             <div class="col-sm-9 d-flex">
             <select type="text" name ="raison_soc_f" class="form-control" id="exampleInputPassword1" required>
-                
+
 <?php
         try{
             $requete = $BD->prepare("SELECT DISTINCT Raison_sociale

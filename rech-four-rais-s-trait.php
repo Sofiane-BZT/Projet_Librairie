@@ -39,7 +39,7 @@ $raisonSocFournisseur = $_POST["raison_soc_f"]
             <th scope=col>E-mail</th>
             <th scope=col>Fax</th>
         </tr><BR>
-<?php
+      <?php
 
             try{
                 $requete = $BD->prepare("SELECT * FROM Fournisseur WHERE `Raison_sociale`=:raison_soc_Du_F");
@@ -48,7 +48,7 @@ $raisonSocFournisseur = $_POST["raison_soc_f"]
 
                   while($obj = $requete->fetch(PDO::FETCH_OBJ)){
 
-                  ?>
+      ?>
                   <tr>
                      <th scope=row><?= $obj->Id_fournisseur ?></th>
                      <td><?=$obj->Nom_fournisseur ?></td>
@@ -64,15 +64,15 @@ $raisonSocFournisseur = $_POST["raison_soc_f"]
                       <td><?=$obj->Fax_fournisseur ?></td>
                       <td><?=$obj->Nb_pages ?></td>
                 
-              <?php
+      <?php
               }
             } catch (PDOException $e){
 
               die("<p> Echec de la connexion. Erreur[".$e->getCode()."] : ".$e->getMessage()."</p>");
-}
-?>
+            }
+      ?>
             </tbody> 
             </table>
           </div>
-          </body>
-          </html>
+        </body>
+      </html>

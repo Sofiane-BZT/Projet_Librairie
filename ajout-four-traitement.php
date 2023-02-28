@@ -2,12 +2,11 @@
 
 include "connexion.php";
 
-      
             if (isset($_POST["nom_fournisseur"]) AND isset($_POST["code_fournisseur"]) AND isset($_POST["raison_soc_fournisseur"])
             AND isset($_POST["rue_fournisseur"]) AND isset($_POST["code_P_fournisseur"]) AND isset($_POST["localite_fournisseur"]) AND isset($_POST["pays_fournisseur"]) AND isset($_POST["tel_fournisseur"])
             AND isset($_POST["url_fournisseur"]) AND isset($_POST["email_fournisseur"]) AND isset($_POST["fax_fournisseur"]))
             {
-               
+
                 if (!empty($_POST["nom_fournisseur"]) AND !empty($_POST["code_fournisseur"]) AND !empty($_POST["raison_soc_fournisseur"]) 
                 AND !empty($_POST["rue_fournisseur"]) AND !empty($_POST["code_P_fournisseur"]) AND !empty($_POST["localite_fournisseur"]) AND !empty($_POST["pays_fournisseur"]) AND !empty($_POST["tel_fournisseur"])
                 AND !empty($_POST["url_fournisseur"]) AND !empty($_POST["email_fournisseur"]) AND !empty($_POST["fax_fournisseur"]))
@@ -35,7 +34,6 @@ include "connexion.php";
                     // echo "$emailFournisseur<BR>";
                     $faxFournisseur = $_POST["fax_fournisseur"]; 
                     // echo "$faxFournisseur<BR>";
-                    
 
                     try {
                         $requete= $BD->prepare("INSERT INTO `Fournisseur` ( Nom_fournisseur, Code_fournisseur, Raison_sociale, Rue_fournisseur, Code_postal, 
@@ -70,5 +68,4 @@ include "connexion.php";
             echo "<script type=\"text/javascript\">";
             echo "window.history.back();";
             echo "</script>";
- 
 ?>

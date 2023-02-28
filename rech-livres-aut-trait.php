@@ -34,7 +34,7 @@ $auteurDuLivre = $_POST["nom_auteur"]
             <th scope=col>Nb_pages</th>
             
         </tr><BR>
-<?php
+      <?php
 
             try{
                   $requete = $BD->prepare("SELECT * FROM Livres WHERE `Auteur`=:Auteur_Du_Livre");
@@ -42,7 +42,7 @@ $auteurDuLivre = $_POST["nom_auteur"]
                   $requete->execute();
 
                   while($obj = $requete->fetch(PDO::FETCH_OBJ)){
-                  ?>
+      ?>
                   <tr>
                      <th scope=row><?=$obj->Id?></th>
                       <td><?=$obj->Nom ?></td>
@@ -51,18 +51,16 @@ $auteurDuLivre = $_POST["nom_auteur"]
                       <td><?=$obj->Annee ?></td>
                       <td><?=$obj->Nb_pages ?></td>
                      
-              <?php
+      <?php
               }
             } catch (PDOException $e){
 
               die("<p> Echec de la connexion. Erreur[".$e->getCode()."] : ".$e->getMessage()."</p>");
-
-}
-?>
-
+            }
+      ?>
 
             </tbody> 
             </table>
           </div>
-          </body>
-          </html>
+        </body>
+      </html>

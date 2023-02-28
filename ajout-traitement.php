@@ -2,11 +2,10 @@
 
 include "connexion.php";
 
-      
             if (isset($_POST["nom_livre"]) AND isset($_POST["nom_auteur"]) AND isset($_POST["nom_editeur"])
             AND isset($_POST["annee_parrution"]) AND isset($_POST["nombre_pages"]))
             {
-               
+
                 if (!empty($_POST["nom_livre"]) AND !empty($_POST["nom_auteur"]) AND !empty($_POST["nom_editeur"]) 
                 AND !empty($_POST["annee_parrution"]) AND !empty($_POST["nombre_pages"]))
                 {
@@ -48,5 +47,4 @@ include "connexion.php";
             echo "<script type=\"text/javascript\">";
             echo "window.history.back();";
             echo "</script>";
- 
 ?>

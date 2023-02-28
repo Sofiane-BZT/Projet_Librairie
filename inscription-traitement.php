@@ -43,7 +43,4 @@ include "connexion.php";
                         echo "le mots mot de passe ne sont pas identiques";
                     }
                 }
-               }
-
-
-          
+            }

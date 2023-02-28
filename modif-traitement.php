@@ -36,5 +36,5 @@ $idmdubuttonhidden  = $_POST["idmHidden"];
                         die("<p> Echec de la connexion. Erreur[".$e->getCode()."] : ".$e->getMessage()."</p>");
                     } 
                         header("Location: liste-livres.php");
-                }
+                 }
                }
